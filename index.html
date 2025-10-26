@@ -4,39 +4,204 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baking with the Gemini API</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Samudra Pasai</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap"
+    rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 <body>
+  <header class="site-header" id="top">
+    <div class="container">
+      <a href="#top" class="brand" aria-label="Alam Rasa Beranda">
+        <img src="img/logo_samudra_pasai.png" alt="Logo Alam Rasa" width="36" height="36">
+        <span>Samudra Pasai</span>
+      </a>
+      <nav class="nav" aria-label="Navigasi utama">
+        <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu">
+          <span class="nav__bar"></span>
+        </button>
+
+        <ul id="nav-menu" class="nav__menu">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#tentang">Letak</a></li>
+          <li><a href="#asal">Asal-Usul</a></li>
+          <li><a href="#menu">Raja</a></li>
+          <li><a href="#kejayaan">Kejayaan</a></li>
+          <li><a href="#keruntuhan">Keruntuhan</a></li>
+          <li><a href="#peninggalan">Peninggalan</a></li>
+          <li><a href="#ai" class="btn btn--primary">TANYA AI</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <h1>Baking with the Gemini API</h1>
-    <form>
-      <div class="image-picker">
-        <label class="image-choice">
-          <input type="radio" checked name="chosen-image" value="/baked_goods_1.jpg">
-          <img src="/baked_goods_1.jpg">
-        </label>
-        <label class="image-choice">
-          <input type="radio" name="chosen-image" value="/baked_goods_2.jpg">
-          <img src="/baked_goods_2.jpg">
-        </label>
-        <label class="image-choice">
-          <input type="radio" name="chosen-image" value="/baked_goods_3.jpg">
-          <img src="/baked_goods_3.jpg">
-        </label>
+    <section id="hero" class="section hero" aria-label="Bagian pembuka dengan ajakan">
+      <div class="container hero__content">
+        <div class="hero__text">
+          <h1 data-aos="fade-up"
+          data-aos-duration="3000"
+          data-aos-delay="500">SAMUDRA<br>PASAI</h1>
+          <p data-aos="fade-right" data-aos-duration="2500">“Kerajaan Islam pertama di Nusantara yang menorehkan jejak kejayaan maritim di pesisir utara Sumatra.”</p>
+          <div class="hero__actions" data-aos="fade-right"
+          data-aos-duration="2500">
+            <a href="#tentang" class="btn btn--primary">Lihat letak kerajaan</a>
+          </div>
+        </div>
+        <div class="hero__media" aria-hidden="true" data-aos="fade-left"
+        data-aos-duration="2500">
+          <div class="hero__circle"></div>
+          <div class="hero__leaves"></div>
+        </div>
       </div>
-      <div class="prompt-box">
-        <label>
-          <input name="prompt" placeholder="Enter instructions here" type="text"
-            value="Provide an example recipe for the baked goods in the image">
-        </label>
-        <button type="submit">Go</button>
+    </section>
+
+    <section id="tentang" class="section about">
+      <div class="container grid-2">
+        <div class="hero__media letak" data-aos="fade-right"
+        data-aos-duration="2500"></div>
+        <div>
+          <h1 data-aos="fade-down"
+          data-aos-duration="3000">Letak<br>Kerajaan</h1>
+          <p data-aos="fade-left"
+          data-aos-duration="2500">Berada di pesisir utara Sumatra, Aceh Utara, dekat Selat Malaka — pusat awal perdagangan dan penyebaran
+            Islam di Nusantara.</p>
+          <ul class="checks" data-aos="fade-left"
+          data-aos-duration="2500">
+            <li>Pusat perdagangan rempah dan emas</li>
+            <li>Gerbang awal penyebaran Islam di Nusantara</li>
+            <li>Pelabuhan penting di jalur internasional</li>
+          </ul>
+        </div>
       </div>
-    </form>
-    <p class="output">(Results will appear here)</p>
+    </section>
+
+    <section id="asal" class="section about">
+      <div class="container grid-2">
+        <!-- <div class="hero__media letak"></div> -->
+        <h1 data-aos="fade-up"
+        data-aos-duration="3000">Asal-Usul<br>Kerajaan</h1>
+        <p data-aos="fade-left"
+        data-aos-duration="2500">Didirikan pada abad ke-13 oleh Sultan Malik Al-Saleh di pesisir utara Sumatra. Kerajaan ini muncul dari
+          pelabuhan dagang kecil yang berkembang pesat karena letaknya strategis di jalur perdagangan internasional.
+        </p>
+        <ul class="checks" data-aos="fade-right"
+        data-aos-duration="2500">
+          <li>Didirikan oleh Sultan Malik Al-Saleh</li>
+          <li>Berperan sebagai pusat perdagangan rempah dan sutra</li>
+          <li>Menjadi pintu awal penyebaran Islam di Nusantara</li>
+          <li>Menjalin hubungan dagang dengan Arab, India, dan Tiongkok</li>
+          <li>Menjadi kerajaan Islam pertama yang berpengaruh di Nusantara</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="menu" class="section menu">
+      <div class="container">
+        <div class="section__header">
+          <h2 data-aos="fade-up"
+          data-aos-duration="3000">Raja Kerajaan</h2>
+          <h3 data-aos="fade-right"
+          data-aos-duration="2500">SAMUDRA PASAI</h3>
+          <h2 data-aos="fade-right"
+          data-aos-duration="2500">Malik Al-Saleh</h2>
+          <p data-aos="fade-left"
+          data-aos-duration="2500">Pendiri sekaligus raja pertama Kerajaan Samudra Pasai. Ia memerintah dengan bijaksana dan menjadikan Pasai
+            sebagai pusat perdagangan sekaligus penyebaran Islam pertama di Nusantara. Di bawah kepemimpinannya,
+            kerajaan mencapai masa kejayaan pada abad ke-13.</p>
+          <div class="raja" data-aos="fade-down"
+          data-aos-duration="3000"
+          data-aos-delay="400"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="kejayaan" class="section kejayaan">
+      <div class="container grid">
+        <div style="max-width: 560px;">
+          <h1 data-aos="fade-down"
+          data-aos-duration="3000">Masa<br>Kejayaan</h1>
+          <p data-aos="fade-right"
+          data-aos-duration="3000">Pada abad ke-13 hingga ke-14, Samudra Pasai mencapai puncak kejayaannya sebagai pusat perdagangan dan
+            penyebaran Islam di Asia Tenggara.</p>
+        </div>
+        <div class="hero__media kejayaan-img" data-aos="fade-left"
+        data-aos-duration="3000"></div>
+      </div>
+    </section>
+
+    <section id="keruntuhan" class="section keruntuhan">
+      <div class="container grid">
+        <div style="max-width: 560px;">
+          <h1 data-aos="fade-up"
+          data-aos-duration="3000">Masa<br>Keruntuhan</h1>
+          <p data-aos="fade-right"
+          data-aos-duration="3000">Pada akhir abad ke-15, kejayaan Samudra Pasai mulai memudar karena berbagai serangan dan persaingan dagang
+            di kawasan pesisir utara Sumatra.</p>
+        </div>
+        <div class="hero__media keruntuhan-img" data-aos="fade-left"
+        data-aos-duration="3000"></div>
+      </div>
+    </section>
+
+    <section id="peninggalan" class="section peninggalan">
+      <div class="container grid">
+        <div style="max-width: 560px;">
+          <h1 data-aos="fade-up"
+          data-aos-duration="3000">Peninggalan<br>Kerajaan</h1>
+          <p data-aos="fade-right"
+          data-aos-duration="3000">Walau telah runtuh, Kerajaan Samudra Pasai meninggalkan berbagai peninggalan berharga yang menjadi bukti
+            kejayaannya di masa lampau.</p>
+        </div>
+        <div class="hero__media peninggalan-img" data-aos="fade-left"
+        data-aos-duration="3000"></div>
+      </div>
+    </section>
+
+    <section id='ai' class="section ai">
+      <div class="container grid-2">
+        <div class="hero__text" data-aos="fade-down"
+        data-aos-duration="3000">
+          <h1>Ayo Tanya Tanya Tentang<br>Kerajaan Samudra Pasai!!</h1>
+          <p>Silahkan Bertanya Apapun Yang Kalian Ingin Tanyakan</p>
+        </div>
+
+        <div class="bg" data-aos="fade-up"
+        data-aos-duration="3000"
+        data-aos-delay="500">
+          <p class="output">hasilnya akan muncul disini </p>
+          <form>
+            <div class="prompt-box">
+              <label>
+                <input name="prompt" placeholder="Tanyakan sesuatu" type="text">
+              </label>
+              <button type="submit" class="btn btn--primary"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Ridho - Fronted Developer</p>
+    </div>
+  </footer>
+
+
+
   <script type="module" src="/main.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 
 </html>

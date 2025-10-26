@@ -1,14 +1,13 @@
 import { GoogleGenAI, HarmBlockThreshold, HarmCategory } from "@google/genai";
-import Base64 from 'base64-js';
+// import Base64 from 'base64-js';
 import MarkdownIt from 'markdown-it';
-import { maybeShowApiKeyBanner } from './gemini-api-banner';
+// import { maybeShowApiKeyBanner } from './gemini-api-banner';
 import './style.css';
 
-// 🔥🔥 FILL THIS OUT FIRST! 🔥🔥
 // Get your Gemini API key by:
 // - Selecting "Add Gemini API" in the "Firebase Studio" panel in the sidebar
 // - Or by visiting https://g.co/ai/idxGetGeminiKey
-let API_KEY = 'TODO';
+let API_KEY = 'AIzaSyCfAXEL_FpBX9wZxGIIZTcVQPuK884Sp28';
 
 let form = document.querySelector('form');
 let promptInput = document.querySelector('input[name="prompt"]');
@@ -16,21 +15,21 @@ let output = document.querySelector('.output');
 
 form.onsubmit = async (ev) => {
   ev.preventDefault();
-  output.textContent = 'Generating...';
+  output.textContent = 'sabar yaa...';
 
   try {
     // Load the image as a base64 string
-    let imageUrl = form.elements.namedItem('chosen-image').value;
-    let imageBase64 = await fetch(imageUrl)
-      .then(r => r.arrayBuffer())
-      .then(a => Base64.fromByteArray(new Uint8Array(a)));
+    // let imageUrl = form.elements.namedItem('chosen-image').value;
+    // let imageBase64 = await fetch(imageUrl)
+    //   .then(r => r.arrayBuffer())
+    //   .then(a => Base64.fromByteArray(new Uint8Array(a)));
 
     // Assemble the prompt by combining the text with the chosen image
     let contents = [
       {
         role: 'user',
         parts: [
-          { inlineData: { mimeType: 'image/jpeg', data: imageBase64 } },
+          // { inlineData: { mimeType: 'image/jpeg', data: imageBase64 } },
           { text: promptInput.value }
         ]
       }
@@ -62,4 +61,13 @@ form.onsubmit = async (ev) => {
 };
 
 // You can delete this once you've filled out an API key
-maybeShowApiKeyBanner(API_KEY);
+// maybeShowApiKeyBanner(API_KEY);
+
+//web
+const toggleBtn = document.querySelector('.nav__toggle');
+const navMenu = document.querySelector('.nav__menu');
+
+toggleBtn.addEventListener('click', () => {
+  toggleBtn.classList.toggle('is-active');
+  navMenu.classList.toggle('is-open');
+});
